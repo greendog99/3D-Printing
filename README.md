@@ -19,6 +19,14 @@ desired.
 
 [Marlin gcode reference](http://marlinfw.org/meta/gcode/)
 
+Upgrades
+--------
+
+* [kuehmayer upgrade guide](https://www.thingiverse.com/thing:3409767)
+* [renba upgrade guide](https://www.thingiverse.com/thing:2919245)
+* [petrzmax upgrade guide](https://www.thingiverse.com/thing:2901190)
+
+
 
 Thingiverse
 -----------
