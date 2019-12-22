@@ -19,20 +19,62 @@ desired.
 
 [Marlin gcode reference](http://marlinfw.org/meta/gcode/)
 
-Upgrades
---------
+Printer Upgrades
+----------------
 
 * [kuehmayer upgrade guide](https://www.thingiverse.com/thing:3409767)
 * [renba upgrade guide](https://www.thingiverse.com/thing:2919245)
 * [petrzmax upgrade guide](https://www.thingiverse.com/thing:2901190)
 
-
-
-Thingiverse
------------
+Things
+------
 
 [My Thingiverse Page](https://www.thingiverse.com/greendog99)
 * [Things I've created or modified](https://www.thingiverse.com/greendog99/designs)
-* [Things I've made](https://www.thingiverse.com/greendog99/makes)
+* [Things I've printed](https://www.thingiverse.com/greendog99/makes)
 * [My Collections](https://www.thingiverse.com/greendog99/collections)
 
+Slicers
+-------
+
+[PrusaSlicer Config](tree/master/PrusaSlicer)
+[Cura Config](tree/master/Cura)
+
+Lessons learned
+---------------
+
+* Temperatures
+  * 185ºC works well for most PLA.
+  * 200ºC works well for PLA+. At 185ºC PLA+ has trouble adhering to
+    previous layers.
+  * 225ºC works best for PETG.
+
+* Layer height
+  * About 50% of nozzle diameter is ideal. Can go up to 75% of
+    nozzle size, but layers may not adhere as well (less "squish" when
+    laying down layers) and may separate.
+
+* Corners
+  * Right angles require the print head to come to a complete stop when
+    turning. This can cause filament to ooze, creating a bulge in the
+    corner. Options:
+    * Design with slight fillets (rounded corners) so the print head
+      doesn't need to stop.
+    * Print perimeters more slowly so the change in speed at corners
+      is less drastic.
+    * Use high acceleration/jerk values (in firmware and/or slicer) to
+      reduce the time the print head spends in the corner. However this
+      can cause other artifacts, such as ringing / ghosting since it
+      causes backlash in the print head carriage.
+
+* Elephant Foot
+  * The first layer tends to expand slightly more than other layers,
+    leading to a slight bulge at the bottom of the print. Setting
+    Elephant Foot Compensation to 0.1mm will shrink the first layer slightly
+    to compensate for this.
+  * PrusaSlicer 2.2 (alpha) handles Elephant Foot edge cases much better than
+    1.1.
+
+* Extrusion Width
+  * TBD...
+  * First layer extrusion width
