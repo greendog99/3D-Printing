@@ -38,9 +38,14 @@ Things
 Slicers
 -------
 
-[PrusaSlicer Config & Info](/greendog99/3D-Printing/tree/master/PrusaSlicer)
+[PrusaSlicer Config & Info](https://github.com/greendog99/3D-Printing/tree/master/PrusaSlicer)
 
-[Cura Config & Info](/greendog99/3D-Printing/tree/master/Cura)
+[Cura Config & Info](https://github.com/greendog99/3D-Printing/tree/master/Cura)
+
+Filament
+--------
+
+[Filament Experiences](https://github.com/greendog99/3D-Printing/blob/master/Filament.md)
 
 Lessons learned
 ---------------
