@@ -7,15 +7,16 @@ My notes, configurations, upgrades, and links for printing with my
 Firmware
 --------
 
-Marlin 1.1.9 Firmware modified for Anycubic Mega:
+Firmware has been upgraded to Marlin 1.1.9 with custom Anycubic
+adaptations by derhopp and davidramiro.
 
-* David Ramiro's [Marlin 1.1.9 Anycubic GitHub Repo](https://github.com/davidramiro/Marlin-Ai3M)
+* [Marlin 1.1.9 Anycubic GitHub Repo](https://github.com/davidramiro/Marlin-Ai3M) or [Thingiverse page with identical info](https://www.thingiverse.com/thing:3249319)
 * [FAQ and calibration](https://github.com/davidramiro/Marlin-AI3M/wiki)
-* [Thingiverse page with idential info](https://www.thingiverse.com/thing:3249319)
+* I am using the `Marlin-AI3M-vx.x.x-TMC2208.hex` variant.
 
-Sends 12V to part cooling fan instead of the standard 9V. Fan speed
-should be set to 75% in slicer settings unless additional cooling is
-desired.
+_Important:_ Marlin 1.1.9 sends 12V to part cooling fan instead of the
+original 9V. Part cooling fan speed should be set to 75% in slicer
+settings to compensate unless additional cooling is desired.
 
 [Marlin gcode reference](http://marlinfw.org/meta/gcode/)
 
@@ -37,8 +38,9 @@ Things
 Slicers
 -------
 
-[PrusaSlicer Config](tree/master/PrusaSlicer)
-[Cura Config](tree/master/Cura)
+[PrusaSlicer Config & Info](tree/master/PrusaSlicer)
+
+[Cura Config & Info](tree/master/Cura)
 
 Lessons learned
 ---------------
