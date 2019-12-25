@@ -76,5 +76,15 @@ Lessons learned
     1.1.
 
 * Extrusion Width
-  * TBD...
-  * First layer extrusion width
+  * Slicers generally use a default extrusion width of 1.125 × nozzle
+    diameter (i.e. 0.45mm for a 0.4 mm nozzle).
+  * Wider extrusion (through squishing the filament) can provide better
+    bed adhesion.
+  * Slightly tweaking extrusion width can help eliminate thin gap-fill
+    lines, e.g. when a wall is not an even multiple of nozzle width.
+
+Designing in Fusion 360
+=======================
+
+TBD
+
