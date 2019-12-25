@@ -38,9 +38,9 @@ Things
 Slicers
 -------
 
-[PrusaSlicer Config & Info](tree/master/PrusaSlicer)
+[PrusaSlicer Config & Info](/greendog99/3D-Printing/tree/master/PrusaSlicer)
 
-[Cura Config & Info](tree/master/Cura)
+[Cura Config & Info](/greendog99/3D-Printing/tree/master/Cura)
 
 Lessons learned
 ---------------
