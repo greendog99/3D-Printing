@@ -6,27 +6,31 @@ My experience with various filaments.
 Favorites
 ---------
 
-eSun PLA+ - Very easy to print with @ 200ºC, minimal warping. Layers
-sometimes don't adhere strongly, which could probably be solved with
-a slightly higher printing temperature. Slightly expensive, $23/kg.
+eSun PLA+ - Prints great @ 200º. Layers sometimes don't adhere strongly,
+which could probably be solved with a slightly higher printing
+temperature. Slightly expensive, $23/kg.
 
-Monoprice PLA+
+Monoprice PLA+ - Very easy to print with.
 
-Mika3D Metallic PLA - Easy to print with @ 185ºC, no issues at all.
-Filament is slightly stretchy/spongy when warm, but this hasn't affected
-print quality. Pricey ($40 for a 3-pack of 1/2 kg spools, i.e. $27/kg)
+Anycubic PLA - Very easy to print with.
 
-Anycubic PLA
+Comgrow/Creality PLA - White prints fine.
+
+Overture PLA - Black prints great. A bit of corner curling. Price varies.
+
+3D Solutech PLA - Prints great. Army green is not brown enough.
 
 
 Good
 ----
 
-AIO Robotics (1/2 kg spool)
+AIO Robotics PLA - a bit of stringing.
 
-Tianse
+Tianse PLA - a bit of stringing on the green. Brown prints well.
 
-Comgrow/Creality
+Mika3D Metallic PLA - Looks great. Fairly easy to print with @ 185ºC.
+Filament is slightly stretchy/spongy when warm, but this hasn't affected
+print quality. Pricey ($27/kg in 3-pack of 1/2 kg spools).
 
 
 Avoid
@@ -39,7 +43,6 @@ printing @ 185ºC.
 TBD
 ---
 
-Anycubic PETG - Having a lot of difficulty printing with it.
-
-Overture - New spool, still evaluating.
+Anycubic PETG - Having a lot of difficulty printing with it. Lots of
+stringing, smearing, and globbing.
 
