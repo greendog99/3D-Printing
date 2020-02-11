@@ -7,14 +7,15 @@ Favorites
 ---------
 
 eSun PLA+ - Prints great @ 200º. Layers sometimes don't adhere strongly,
-which could probably be solved with a slightly higher printing
-temperature. Slightly expensive, $23/kg.
+which may be solved with a slightly higher printing temperature.
+Expensive @ $23/kg.
 
-Monoprice PLA+ - Very easy to print with.
+Monoprice PLA+ - Very easy to print with. Comes in 1/2 kg spools @
+$13 ($26/kg).
 
 Anycubic PLA - Very easy to print with.
 
-Comgrow/Creality PLA - White prints fine.
+Comgrow/Creality PLA - Prints and looks fine.
 
 Overture PLA - Black prints great. A bit of corner curling. Price varies.
 
