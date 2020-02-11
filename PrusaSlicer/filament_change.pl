@@ -27,10 +27,11 @@ while (<>) {
   # If the line is M600, insert custom filament change code.
   if (rindex($_, "M600", 0) == 0) {
     $wipe_y += 3;            # Move the wipe (nozzle clean) line a bit further
+    print "; Filament / color change\n";
     print "G92 E0            ; Zero the extruded length\n";
     print "G1 E-25 F1200     ; Retract for easier filament swap\n";
-    print "G0 Z$height       ; Move up a bit\n";
-    print "G0 X0 Y$wipe_y    ; Move close to front left\n";
+    print "G0 Z$height            ; Move up a bit\n";
+    print "G0 X0 Y$wipe_y          ; Move close to front left\n";
     print "M0                ; Pause for filament change until user presses 'Resume'\n";
     print "G0 Z0.15          ; Move back to layer 0 for wipe\n";
     print "G92 E0            ; Zero the extruded length\n";
