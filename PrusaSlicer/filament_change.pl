@@ -45,6 +45,7 @@ while (<>) {
 
   # If the line is M600, insert custom filament change code.
   if (rindex($_, "M600", 0) == 0) {
+    my $trash = readline(<>);   # Throw away the next line (retract 3)
     $wipe_y += 3;            # Move the wipe (nozzle clean) line a bit further
     print ";\n; MDF Filament / color change\n;\n";
     print "G92 E0            ; Zero the extruded length\n";
@@ -55,14 +56,14 @@ while (<>) {
     print "M0                ; Pause for filament change until user presses 'Resume'\n";
     print "G0 Z0.15          ; Move back to layer 0 for wipe\n";
     print "G92 E0            ; Zero the extruded length (user pushed new filament in)\n";
-    print "G1 X40 E25 F500   ; Extrude 25mm of filament in a 40mm line\n";
-    print "G1 E23 F1000      ; Retract 2mm\n";
-    print "G1 X80 F4000      ; Quickly wipe away from the filament line\n";
-    print "G1 E21 F1000      ; Retract 2mm\n";
+    print "G1 X50 E30 F500   ; Extrude 30mm of filament in a 50mm line\n";
+    print "G1 E22 F1000      ; Retract 3mm\n";
+    print "G1 X90 F4000      ; Quickly wipe away from the filament line\n";
+    print "G1 E20 F1000      ; Retract another 2mm (5mm total)\n";
     print "G0 Z$height          ; Move up again to prevent dragging across print\n";
     print "G0 $g1xy     ; Move back to previous X and Y position\n";
-    print "G1 E24 F1000      ; Unretract all but 1mm before resuming print\n";
-    print "G92 $g1e       ; Restore extruder position\n";
+    print "G1 E22 F1000      ; Unretract all but 3mm before resuming print\n";
+    #print "G92 $g1e       ; Restore extruder position\n";
     print "; Move back to correct Z height.\n";
     print $g1z;
   } else {

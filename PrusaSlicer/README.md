@@ -7,7 +7,7 @@ The included `config_bundle.ini` can be imported from `File` -> `Import`
 -> `Import config bundle`. This will add several Printer, Filament, and
 Print configurations ending in "MDF" (my initials).
 
-This `config_bundle.ini` is for PrusaSlicer 2.2.0-rc.
+This `config_bundle.ini` is for PrusaSlicer 2.2.0-rc4.
 
 Filament Color Changes
 ----------------------
