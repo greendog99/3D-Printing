@@ -15,6 +15,11 @@ easily separate them from defaults and other customized presets.
 
 This `config_bundle.ini` is for PrusaSlicer 2.2.0.
 
+Notes
+-----
+
+* To disable gap fill lines, set `Speed` -> `Gap fill` to `0`.
+
 Filament Color Changes
 ----------------------
 
