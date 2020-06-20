@@ -57,15 +57,15 @@ while (<>) {
     print "G0 Z0.15          ; Move back to layer 0 for wipe\n";
     print "G92 E0            ; Zero the extruded length (user pushed new filament in)\n";
     print "G1 X50 E30 F500   ; Extrude 30mm of filament in a 50mm line\n";
-    print "G1 E22 F1000      ; Retract 3mm\n";
+    print "G1 E27 F1000      ; Retract 3mm\n";
     print "G1 X90 F4000      ; Quickly wipe away from the filament line\n";
-    print "G1 E20 F1000      ; Retract another 2mm (5mm total)\n";
+    print "G1 E25 F1000      ; Retract another 2mm (5mm total)\n";
     print "G0 Z$height          ; Move up again to prevent dragging across print\n";
     print "G0 $g1xy     ; Move back to previous X and Y position\n";
-    print "G1 E22 F1000      ; Unretract all but 3mm before resuming print\n";
-    #print "G92 $g1e       ; Restore extruder position\n";
     print "; Move back to correct Z height.\n";
     print $g1z;
+    print "G1 E29.9 F1000      ; Unretract\n";
+    print "G92 $g1e       ; Restore extruder position\n";
   } else {
     print;    # Copy all other lines as-is
   }
