@@ -10,7 +10,7 @@ Plugins
 
 Plugins I have installed, and some of their settings.
 
-BetterHeateTimeout
+BetterHeaterTimeout
 * Timeout: 600 seconds after target temp changes
 * Bed: 3600 seconds
 
@@ -41,7 +41,7 @@ MQTT
 * All progress messages
 * Activate temperature messages (0.1º C)
 
-Navbar Temperature
+_Navbar Temperature_
 * Displays temperatures in the top navigation bar.
 
 PortLister
