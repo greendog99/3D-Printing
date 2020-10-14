@@ -7,18 +7,14 @@ My notes, configurations, upgrades, and links for printing with my
 Firmware
 --------
 
-Firmware has been upgraded to Marlin 1.1.9 with custom Anycubic
-adaptations by derhopp and davidramiro.
+Firmware has been upgraded to Marlin 2.0.x with custom Anycubic
+adaptations:
 
-* [Main Web Site](https://kore.cc/i3mega/doc/) or
-  [Marlin 1.1.9 Anycubic GitHub Repo](https://github.com/davidramiro/Marlin-Ai3M) or
-  [Thingiverse page with identical info](https://www.thingiverse.com/thing:3249319)
-* [FAQ and calibration](https://github.com/davidramiro/Marlin-AI3M/wiki)
-* I am using the `Marlin-AI3M-vx.x.x-TMC2208.hex` variant.
+* [Marlin 2.0.x Anycubic i3 Mega S](https://github.com/knutwurst/Marlin-2-0-x-Anycubic-i3-MEGA-S)
 
-_Important:_ Marlin 1.1.9 sends 12V to part cooling fan instead of the
-original 9V. Part cooling fan speed should be set to 75% in slicer
-settings to compensate unless additional cooling is desired.
+_Important:_ Marlin 2.0.x sends 12V to part cooling fan instead of the original
+9V. Part cooling fan speed should be set to 75% in slicer settings to
+compensate unless additional cooling is desired.
 
 [Marlin gcode reference](http://marlinfw.org/meta/gcode/)
 
