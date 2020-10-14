@@ -46,7 +46,7 @@ while (<>) {
   # If the line is M600, insert custom filament change code.
   if (rindex($_, "M600", 0) == 0) {
     my $trash = readline(<>);   # Throw away the next line (retract 3)
-    $wipe_y += 3;            # Move the wipe (nozzle clean) line a bit further
+    $wipe_y += 5;            # Move the wipe (nozzle clean) line a bit further
     print ";\n; MDF Filament / color change\n;\n";
     print "G92 E0            ; Zero the extruded length\n";
     print "G1 E-20 F1200     ; Retract for easier filament swap\n";
