@@ -7,16 +7,21 @@ My notes, configurations, upgrades, and links for printing with my
 Firmware
 --------
 
-Firmware has been upgraded to Marlin 2.0.x with custom Anycubic
+Firmware has been upgraded to Knutwurst's Marlin 2.0.x with custom Anycubic
 adaptations:
 
-* [Marlin 2.0.x Anycubic i3 Mega S](https://github.com/knutwurst/Marlin-2-0-x-Anycubic-i3-MEGA-S)
+* [Knutwurst's i3 MEGA Firmware based on Marlin 2.0.x](https://github.com/knutwurst/Marlin-2-0-x-Anycubic-i3-MEGA-S)
 
-_Important:_ Marlin 2.0.x sends 12V to part cooling fan instead of the original
-9V. Part cooling fan speed should be set to 75% in slicer settings to
-compensate unless additional cooling is desired.
+_Important:_ Marlin 2.0.x sends 12V to the part cooling fan instead of the
+original 9V. The part cooling fan speed should be set to 75% in slicer settings
+to compensate unless additional cooling is desired.
 
-[Marlin gcode reference](http://marlinfw.org/meta/gcode/)
+Slicing
+-------
+
+I almost exclusively use PrusaSlicer. Below is a link to my configurations and settings.
+
+* [PrusaSlicer Config & Info](https://github.com/greendog99/3D-Printing/tree/master/PrusaSlicer)
 
 Printer Upgrades
 ----------------
@@ -33,14 +38,6 @@ Things
 * [Things I've printed](https://www.thingiverse.com/greendog99/makes)
 * [My Collections](https://www.thingiverse.com/greendog99/collections)
 
-Slicers
--------
-
-I almost exclusively use PrusaSlicer.
-
-* [PrusaSlicer Config & Info](https://github.com/greendog99/3D-Printing/tree/master/PrusaSlicer)
-* [Cura Config & Info](https://github.com/greendog99/3D-Printing/tree/master/Cura)
-
 Filament
 --------
 
@@ -50,14 +47,22 @@ Lessons learned
 ---------------
 
 * Temperatures
-  * 185ºC works well for most PLA.
-  * 200ºC works well for PLA+. At 185ºC PLA+ has trouble adhering to previous layers.
-  * 225ºC works best for PETG.
+  * PLA: 185ºC tool and 60ºC bed
+  * PLA+: 200ºC tool and 60ºC bed. At 185ºC PLA+ has trouble adhering to previous layers.
+  * PLA with flecks, sparkles, etc: 210ºC tool and 60ºC bed. At lower temps, the nozzle may clog.
+  * PETG: 235ºC tool and 90ºC bed for the first layer, then 225ºC & 80ºC to prevent stringing.
 
 * Layer height
-  * About 50% of nozzle diameter is ideal. Can go up to 75% of
-    nozzle size, but layers may not adhere as well (less "squish" when
-    laying down layers) and may separate.
+  * About 50% of nozzle diameter is ideal (e.g. 0.2mm with a 0.4mm nozzle).
+    Can go up to 75% of nozzle size pretty safely, but layers may not adhere as well.
+
+* Perimeter Width
+  * Slicers generally use a default extrusion width of 1.125 × nozzle
+    diameter (i.e. 0.45mm for a 0.4 mm nozzle).
+  * Wider extrusion (through squishing the filament) will print faster. Widths up to
+    around 1.5x nozzle diameter are safe (e.g. 0.6mm wide with a 0.4mm nozzle).
+  * Slightly tweaking extrusion width can help eliminate thin gap-fill
+    lines, e.g. when a wall is not an even multiple of nozzle width.
 
 * Corners
   * Right angles require the print head to come to a complete stop when
@@ -75,17 +80,4 @@ Lessons learned
     leading to a slight bulge at the bottom of the print. Setting
     Elephant Foot Compensation to 0.1mm or 0.2mm will shrink the first
     layer slightly to compensate for this.
-
-* Extrusion Width
-  * Slicers generally use a default extrusion width of 1.125 × nozzle
-    diameter (i.e. 0.45mm for a 0.4 mm nozzle).
-  * Wider extrusion (through squishing the filament) can provide better
-    bed adhesion. A 0.4mm nozzle can extrude lines up to around 0.6mm wide.
-  * Slightly tweaking extrusion width can help eliminate thin gap-fill
-    lines, e.g. when a wall is not an even multiple of nozzle width.
-
-Designing in Fusion 360
-=======================
-
-TBD
 

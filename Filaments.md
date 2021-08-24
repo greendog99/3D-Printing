@@ -6,9 +6,13 @@ My experience with various filaments.
 Favorites
 ---------
 
-eSun PLA+ - Prints great @ 200º. Layers sometimes don't adhere strongly,
-which may be solved with a slightly higher printing temperature.
-Expensive @ $24/kg. Some colors are available as spool refills for $22/kg.
+eSun PLA+ - Prints great @ 200–210ºC. My go-to. Expensive @ $24/kg.
+
+ZIRO - Marble and sparkle filaments look great. Requires 210-220ºC. Expensive
+and sometimes hard to get.
+
+Good
+----
 
 Monoprice PLA+ - Very easy to print with. Comes in 1/2 kg spools @
 $13 ($26/kg).
@@ -20,11 +24,6 @@ Comgrow/Creality PLA - Prints and looks fine.
 Overture PLA - Black prints well, though a bit of corner curling.
 
 3D Solutech PLA - Prints well. Army green is not brown enough.
-
-ZIRO - Marble filament looks great compared to a plain white. Requires 210-220ºC.
-
-Good
-----
 
 AIO Robotics PLA - a bit of stringing.
 
@@ -46,11 +45,13 @@ created a mess. Gave up and had to trash 0.8 kg of it.
 TBD
 ---
 
-Anycubic PETG - Having a lot of difficulty printing with it. Lots of
-stringing, smearing, and globbing.
+Anycubic PETG - Difficult to print with, but sounds like that's typical with
+PETG. I haven't tried any other brands yet.
 
 Empty Spool Weights
 ===================
 
 * Tianse: 206g
-* ZIRO: 223g
+* ZIRO		223g (old - transparent spool)
+* ZIRO		235g (new - black spool w/ colored core)
+* eSun refillable		267g

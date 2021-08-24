@@ -15,46 +15,42 @@ easily separate them from defaults and other customized presets.
 
 This `config_bundle.ini` is for PrusaSlicer 2.2.0.
 
-Notes
------
+Tips & Tricks
+-------------
 
-* To disable gap fill lines, set `Speed` -> `Gap fill` to `0`.
+* To disable gap fill entirely, set `Speed` -> `Gap fill` to `0`.
 
 Filament Color Changes
 ----------------------
 
 After slicing, the layer slider can be adjusted and the (+) button used to add
-an `M600: Filament Change` command to the gcode at the start of the selected
+an `M600` _Filament Change_ command to the gcode at the start of the selected
 layer.
 
-`M600` will normally cause the Marlin 1.1.9 firmware to stop printing and wait
-for user acknowledgement via the touchscreen. However, with OctoPrint the
-touchscreen is not active and resuming the print from the OctoPrint interface
-is non-trivial. Therefore, I use a custom script to modify the gcode, searching
-for `M600` and replacing it with more advanced commands.
+`M600` will normally cause the Marlin firmware to stop printing and wait for
+user acknowledgement via the touchscreen. However, there is no process to purge
+the old color from the nozzle before resuming the print. Therefore, I use a
+custom script to modify the gcode, searching for `M600` and replacing it with
+more advanced commands.
 
-The included `PrusaSlicer_config_bundle.ini` includes a call to an external
-Perl script used to enhance mid-print filament color changes. The included
-`filament_change.pl` script path will need to be installed on the same computer
-as PrusaSlicer, and the path to the script updated in `Print Settings` ->
-`Output options` -> `Post-processing scripts`. The script will be called after
-slicing is complete, but before the gcode is sent to OctoPrint.
+The included `filament_change.py` script path will need to be installed on the
+same computer as PrusaSlicer, and the path to the script added in `Print
+Settings` -> `Output options` -> `Post-processing scripts`. The script will be
+called when the `Export G-code` or `G>Send to Printer` buttons are pressed.
 
-The `filament_change.pl` script performs the following steps:
+The `filament_change.py` script performs the following steps:
 
 1. Searches for `M600` gcode commands.
-1. Remembers the current X, Y, Z, position of the nozzle and E position of the extruder.
-1. Retracts filament slightly to let the filament end cool a bit.
-1. Moves the nozzle up and away from the print to prevent melting.
+1. Remembers the current Z position of the nozzle.
+1. Retracts filament to prevent oozing onto the print.
+1. Moves the nozzle up and away from the print.
+1. Retracts the filament all the way to the extruder entry.
 1. Pauses the job via `M0` to allow the user to swap filaments.
-   _I recommend pushing the new filament through the nozzle until the new
-   color is visible, then remove the extruded waste._
+   _New filament should be inserted until it is just visible at the beginning of the bowden tube._
 1. Waits for the `Resume` button in Octoprint to continue the job.
-1. Moves to the front-left (home) of the print bed and extrudes a thick
-   wipe line to purge the nozzle of the prior color.
-1. Returns to the previously stored X, Y, Z, and E position to continue the print.
+1. Moves to the front-left (home) of the print bed.
+1. Inserts filament all the way to the nozzle.
+1. Extrudes a thick wipe line to purge the nozzle of the prior color.
+1. Returns to the previously stored Z position and continues the print.
 
-The script can handle several `M600` color changes in one print job, moving
-slightly back each time for the next purge/wipe line:
-
-![alt text](https://raw.githubusercontent.com/greendog99/3D-Printing/master/PrusaSlicer/wipe-lines.jpeg)
+Each purge line must be removed from the bed before the next filament change!
