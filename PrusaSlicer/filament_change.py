@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/local/bin/python3 -E
 
 # Gcode post-processing for PrusaSlicer single extruder color change.
 #
@@ -39,15 +39,17 @@ with open(sourceFile, "w") as of:
             print(';M600 filament change replacement gcode', file=of)
             print('M117 Please change filament and resume.', file=of)
             print('M83', file=of)                                # Relative mode for extruder positions
-            print('G1 E-20 F1000', file=of)                      # Retract filament slightly to prevent oozing
-            print(f'G0 X0 Y10 Z{float(z) + 1}', file=of)         # Move the nozzle up a bit and to the corner
-            print(f'G1 E-{filament_remove_length - 20} F600', file=of) # Retract filament the rest of the way
+            print('G1 E-30 F900', file=of)                       # Retract filament slightly to prevent oozing
+            print(f'G0 X0 Y5 Z{float(z) + 1} F900', file=of)     # Move the nozzle up a bit and to the corner
+            print(f'G1 E-{filament_remove_length - 30} F900', file=of) # Retract filament the rest of the way
+            print('M106 S80', file=of)                           # Slow down fan
             print('@pause', file=of)                             # Pause Octoprint for filament swap
+            print('M106 S160', file=of)                          # Speed up fan
             print('G0 Z0.2', file=of)                            # Return to layer zero to perform a wipe
             print(f'G1 E{filament_insert_length} F900', file=of) # Insert filament back to the nozzle
-            print('G1 X70 E30 F500', file=of)                    # Purge line to bring in new color
+            print('G1 X100 E60 F500', file=of)                   # Purge line to bring in new color
             print('G1 E-1 F1000', file=of)                       # Retract slightly to relieve pressure
-            print('G1 X120 F1500', file=of)                      # Let nozzle ooze out
+            print('G1 X150 F1500', file=of)                      # Let nozzle ooze out
             print('M82', file=of)                                # Absolute mode for extruder positions
             print('G92 E0', file=of)                             # Zero out the extruder position
             print(g1z, file=of)                                  # Move the nozzle back to the correct height
